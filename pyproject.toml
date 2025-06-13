@@ -1,0 +1,39 @@
+[project]
+name = "pix-tell"
+version = "1.0.0"
+description = "An intelligent AI-powered application that analyzes and describes images with clear, detailed, and natural language."
+authors = [
+    {name = "Ron Webb", email = "ron.webb@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "huggingface-hub (>=0.32.4,<0.33.0)",
+    "transformers (>=4.52.4,<5.0.0)",
+    "torch (>=2.7.1,<3.0.0)",
+    "pillow (>=11.2.1,<12.0.0)",
+    "torchvision (>=0.22.1,<0.23.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pylint = "^3.3.7"
+pytest = "^8.4.0"
+pytest-cov = "^6.1.1"
+
+[[tool.poetry.source]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu126"
+priority = "explicit"
+
+[tool.poetry.dependencies]
+torch = {version = "*", source = "pytorch-cuda"}
+torchvision = {version = "*", source = "pytorch-cuda"}
+torchaudio = {version = "*", source = "pytorch-cuda"}
