@@ -15,14 +15,6 @@ cd pix-tell
 poetry install
 ```
 
-## :closed_lock_with_key: Environment Variable
-
-Ensure that a `HF_TOKEN` environment variable is in your system with your Hugging Face API token:
-
-```env
-HF_TOKEN=your_huggingface_token_here
-```
-
 ## :zap: Usage
 
 Run the application in your terminal:
